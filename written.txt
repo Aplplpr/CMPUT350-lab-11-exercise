@@ -1,2 +1,3 @@
-2a.
-2b.
+2a. The batched version ran at around 14.93 FPS, while the non-batched version was slightly faster at 15.11 FPS. The difference was pretty small, so batching didn't really improve performance in our test.
+
+2b. We could give each sprite a Z coordinate to represent its depth. Then, by enabling OpenGL's depth testing with `glEnable(GL_DEPTH_TEST)`, the GPU can automatically figure out which sprites should appear in front of others. This way, we wouldn't need to manually sort the sprites by depth.
